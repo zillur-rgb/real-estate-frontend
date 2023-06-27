@@ -8,17 +8,21 @@ import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { chakraTheme } from "./styles/theme.ts";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.ts";
 
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <BrowserRouter>
-    <QueryClientProvider client={queryClient}>
-      <ChakraProvider theme={chakraTheme}>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
-      </ChakraProvider>
-    </QueryClientProvider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <ChakraProvider theme={chakraTheme}>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </ChakraProvider>
+      </QueryClientProvider>
+    </BrowserRouter>
+  </Provider>
 );
