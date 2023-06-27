@@ -4,8 +4,15 @@ const colors = {
   brand: {
     900: "#2F54E9",
     800: "#242424",
-    700: "#D9D7D5",
+    700: "#888",
   },
 };
 
-export const chakraTheme = extendTheme({ colors });
+const fonts = {
+  fonts: {
+    heading: `'Ubuntu', sans-serif`,
+    body: `'Ubuntu', sans-serif`,
+  },
+};
+
+export const chakraTheme = extendTheme({ colors, fonts });

@@ -1,9 +1,12 @@
+import About from "../components/home/About";
+import Header from "../components/home/Header";
 import Layout from "../components/shared/Layout";
 
 const Home = () => {
   return (
     <Layout>
-      <h1>Home</h1>
+      <Header />
+      <About />
     </Layout>
   );
 };
