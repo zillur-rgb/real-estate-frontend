@@ -40,22 +40,22 @@ const PopularProperties = () => {
       </Text>
 
       <SimpleGrid columns={[1, null, 3]} spacing="40px">
-        <VStack spacing={4} align={"flex-start"}>
+        <VStack spacing={2} align={"flex-start"}>
           <img height={"400px"} src={beach} alt="beach" />
-          <Text>Beach Properties</Text>
-          <Text>{data?.beach} Properties</Text>
+          <Text color={"brand.800"}>Beach Properties</Text>
+          <Text color={"brand.700"}>{data?.beach} Properties</Text>
           <ButtonComponent label="More Properties" />
         </VStack>
-        <VStack spacing={4} align={"flex-start"}>
+        <VStack spacing={2} align={"flex-start"}>
           <img height={"400px"} src={mountain} alt="mountain" />
-          <Text>Mountain Proprties</Text>
-          <Text>{data?.mountain} Properties</Text>
+          <Text color={"brand.800"}>Mountain Proprties</Text>
+          <Text color={"brand.700"}>{data?.mountain} Properties</Text>
           <ButtonComponent label="More Properties" />
         </VStack>
-        <VStack spacing={4} align={"flex-start"}>
+        <VStack spacing={2} align={"flex-start"}>
           <img height={"400px"} src={village} alt="mountain" />
-          <Text>Country Side Proprties</Text>
-          <Text>{data?.village} Properties</Text>
+          <Text color={"brand.800"}>Country Side Proprties</Text>
+          <Text color={"brand.700"}>{data?.village} Properties</Text>
           <ButtonComponent label="More Properties" />
         </VStack>
       </SimpleGrid>

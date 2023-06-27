@@ -7,7 +7,13 @@ interface IProps {
 
 const HeadingComponent = ({ text, color }: IProps) => {
   return (
-    <Text fontSize={36} fontWeight={700} color={color || "brand.800"}>
+    <Text
+      textTransform={"uppercase"}
+      letterSpacing={"-2px"}
+      fontSize={36}
+      fontWeight={700}
+      color={color || "brand.800"}
+    >
       {text}
     </Text>
   );

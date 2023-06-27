@@ -1,6 +1,7 @@
 import About from "../components/home/About";
 import Header from "../components/home/Header";
 import PopularProperties from "../components/home/PopularProperties";
+import WhyUs from "../components/home/WhyUs";
 import Layout from "../components/shared/Layout";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Header />
       <About />
       <PopularProperties />
+      <WhyUs />
     </Layout>
   );
 };
