@@ -9,9 +9,9 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Logo from "./Logo";
 
 const Footer = () => (
-  <Container as="footer" role="contentinfo" py={{ base: "12", md: "16" }}>
-    <Stack spacing={{ base: "4", md: "5" }}>
-      <Stack justify="space-between" direction="row" align="center">
+  <Container as="footer" role="contentinfo" py={{ base: "4", md: "8" }}>
+    <Stack justify={"space-between"} w="100%" justifyContent={"space-between"}>
+      <Stack w="100%" justify="space-between" direction="row" align="center">
         <Logo />
         <ButtonGroup variant="tertiary">
           <IconButton

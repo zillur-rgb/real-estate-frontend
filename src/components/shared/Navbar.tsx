@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link>
         ))}
       </HStack>
-      <ButtonComponent label="Join" />
+      <ButtonComponent label="Join" href="/register" />
     </HStack>
   );
 };
