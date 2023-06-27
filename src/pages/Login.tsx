@@ -8,6 +8,7 @@ import { hideLoading, showLoading } from "../redux/features/alert/alertSlice";
 import Logo from "../components/shared/Logo";
 import Layout from "../components/shared/Layout";
 import HeadingComponent from "../components/shared/Heading";
+import { setUser } from "../redux/features/auth/authSlice";
 
 type IRegister = {
   email: string;
@@ -41,8 +42,9 @@ const Login = () => {
       if (data.success) {
         dispatch(hideLoading());
         localStorage.setItem("token", data.data.token);
+        dispatch(setUser(data.data));
         toast.success("User has been logged in");
-        navigate("/properties");
+        navigate("/");
       }
     } catch (error) {
       dispatch(hideLoading());
