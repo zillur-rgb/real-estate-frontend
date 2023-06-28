@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Properties from "./pages/Properties";
 import NotFound from "./pages/NotFound";
+import Details from "./components/properties/Details";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/properties" element={<Properties />} />
+        <Route path="/properties/details/:propertyId" element={<Details />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
