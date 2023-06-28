@@ -44,19 +44,28 @@ const PopularProperties = () => {
           <img height={"400px"} src={beach} alt="beach" />
           <Text color={"brand.800"}>Beach Properties</Text>
           <Text color={"brand.700"}>{data?.beach} Properties</Text>
-          <ButtonComponent label="More Properties" />
+          <ButtonComponent
+            href={`/properties/type/beach`}
+            label="More Properties"
+          />
         </VStack>
         <VStack spacing={2} align={"flex-start"}>
           <img height={"400px"} src={mountain} alt="mountain" />
           <Text color={"brand.800"}>Mountain Proprties</Text>
           <Text color={"brand.700"}>{data?.mountain} Properties</Text>
-          <ButtonComponent label="More Properties" />
+          <ButtonComponent
+            href={`/properties/type/mountain`}
+            label="More Properties"
+          />
         </VStack>
         <VStack spacing={2} align={"flex-start"}>
           <img height={"400px"} src={village} alt="mountain" />
           <Text color={"brand.800"}>Country Side Proprties</Text>
           <Text color={"brand.700"}>{data?.village} Properties</Text>
-          <ButtonComponent label="More Properties" />
+          <ButtonComponent
+            href={`/properties/type/village`}
+            label="More Properties"
+          />
         </VStack>
       </SimpleGrid>
     </VStack>
