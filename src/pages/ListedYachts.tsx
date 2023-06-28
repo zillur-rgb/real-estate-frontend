@@ -1,17 +1,17 @@
-import ProfileLayout from "../components/profile/Layout";
-import ListedProperties from "../components/profile/ListeProperties";
-import ProfileNavbar from "../components/profile/ProfileNavbar";
 import Layout from "../components/shared/Layout";
+import ProfileLayout from "../components/profile/Layout";
+import ProfileNavbar from "../components/profile/ProfileNavbar";
+import AllYachts from "../components/profile/AllYachts";
 
-const Profile = () => {
+const ListedYachts = () => {
   return (
     <Layout>
       <ProfileLayout>
         <ProfileNavbar />
-        <ListedProperties />
+        <AllYachts />
       </ProfileLayout>
     </Layout>
   );
 };
 
-export default Profile;
+export default ListedYachts;

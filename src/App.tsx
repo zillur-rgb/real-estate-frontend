@@ -10,6 +10,9 @@ import PropertyType from "./components/properties/PropertyType";
 import Profile from "./pages/Profile";
 import PublicRoute from "./routes/PublicRoutes";
 import PrivateRoute from "./routes/PrivateRoute";
+import ListedYachts from "./pages/ListedYachts";
+import BookmarkedYachts from "./pages/BookmarkedYachts";
+import BookmarkedProperties from "./pages/BookmarkedProperties";
 
 function App() {
   return (
@@ -57,10 +60,34 @@ function App() {
           }
         />
         <Route
-          path="/my-profile"
+          path="/my-profile/listed-properties"
           element={
             <PrivateRoute>
               <Profile />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/my-profile/listed-yachts"
+          element={
+            <PrivateRoute>
+              <ListedYachts />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/my-profile/bookmarked-yachts"
+          element={
+            <PrivateRoute>
+              <BookmarkedYachts />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/my-profile/bookmarked-properties"
+          element={
+            <PrivateRoute>
+              <BookmarkedProperties />
             </PrivateRoute>
           }
         />

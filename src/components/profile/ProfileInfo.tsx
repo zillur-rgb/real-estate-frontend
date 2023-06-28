@@ -8,7 +8,7 @@ const ProfileInfo = () => {
   const { user } = useAppSelector((state) => state.auth);
   const navigate = useNavigate();
   return (
-    <VStack>
+    <VStack py={6}>
       <HeadingComponent text={`Welcome ${user?.username}`} />
       <HStack>
         <ButtonComponent label="Update Profile" />

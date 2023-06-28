@@ -46,7 +46,10 @@ const Navbar = () => {
         ))}
       </HStack>
       {localStorage.getItem("username") ? (
-        <ButtonComponent label="My Dashboard" href="/my-profile" />
+        <ButtonComponent
+          label="My Dashboard"
+          href="/my-profile/listed-properties"
+        />
       ) : (
         <ButtonComponent label="Join" href="/register" />
       )}
