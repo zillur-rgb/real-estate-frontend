@@ -42,6 +42,7 @@ const Login = () => {
       if (data.success) {
         dispatch(hideLoading());
         localStorage.setItem("token", data.data.token);
+        localStorage.setItem("username", data.data.data.username);
         dispatch(setUser(data.data));
         toast.success("User has been logged in");
         navigate("/");

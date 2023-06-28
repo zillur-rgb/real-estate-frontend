@@ -2,7 +2,6 @@ import { HStack, Text } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
-import { useAppSelector } from "../../redux/hooks";
 
 const navContents = [
   {
@@ -28,8 +27,6 @@ const navContents = [
 ];
 
 const Navbar = () => {
-  const { user } = useAppSelector((state) => state.auth);
-
   return (
     <HStack
       maxW="100vw"
@@ -44,8 +41,8 @@ const Navbar = () => {
           </Link>
         ))}
       </HStack>
-      {user?.token ? (
-        <Text>Hello {user.data.username}</Text>
+      {localStorage.getItem("username") ? (
+        <Text>Hello {localStorage.getItem("username")}</Text>
       ) : (
         <ButtonComponent label="Join" href="/register" />
       )}
