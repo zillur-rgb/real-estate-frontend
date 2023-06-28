@@ -22,11 +22,11 @@ export interface UserResponse {
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
-    user: null as UserResponse | null,
+    user: null as UserData | null,
   },
   reducers: {
     setUser: (state, action: PayloadAction<UserResponse | null>) => {
-      state.user = action.payload;
+      state.user = action.payload?.data || null;
       console.log("set user", state.user);
     },
   },
