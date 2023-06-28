@@ -8,7 +8,7 @@ interface IProps {
 
 const SingleProperty = ({ data }: IProps) => {
   return (
-    <Link to={`/details/${data?._id}`}>
+    <Link to={`/properties/details/${data?._id}`}>
       <Box
         _hover={{
           borderColor: "brand.900",
