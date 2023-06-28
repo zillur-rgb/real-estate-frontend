@@ -2,6 +2,7 @@ import { HStack, Text } from "@chakra-ui/react";
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
+import { useAppSelector } from "../../redux/hooks";
 
 const navContents = [
   {
@@ -27,6 +28,9 @@ const navContents = [
 ];
 
 const Navbar = () => {
+  const { user } = useAppSelector((state) => state.auth);
+  console.log("user", user);
+
   return (
     <HStack
       maxW="100vw"
@@ -42,7 +46,7 @@ const Navbar = () => {
         ))}
       </HStack>
       {localStorage.getItem("username") ? (
-        <Text>Hello {localStorage.getItem("username")}</Text>
+        <ButtonComponent label="My Dashboard" href="/my-profile" />
       ) : (
         <ButtonComponent label="Join" href="/register" />
       )}

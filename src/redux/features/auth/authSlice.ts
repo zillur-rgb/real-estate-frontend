@@ -27,6 +27,7 @@ export const authSlice = createSlice({
   reducers: {
     setUser: (state, action: PayloadAction<UserResponse | null>) => {
       state.user = action.payload;
+      console.log("set user", state.user);
     },
   },
 });
